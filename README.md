@@ -52,21 +52,21 @@ This needs to receive Input and ButtonForm components, thoses going to be explai
 # Input Component
 This component is develop with controlled input, it means that you'll need to send **state and setState** to work, and some other props for input data, like the code snippet below:
 
-    funtion Input ({ state, setState, text, results, name, type }){
-	    
-	    const  error = results && results.find(r  =>  r.label === name)
-	    
-	    return(
-		    <div>
-			    <input name={name}
-			    placeholder={text}
-			    type={type}
-			    onChange={e => setState(e.target.value)}
-			    />
-			    {error && <span>{error.text}</span>}
-			</div>
-	    );
-    }
+funtion Input ({ state, setState, text, results, name, type }){
+
+	const  error = results && results.find(r  =>  r.label === name)
+
+	return(
+		<div>
+			<input name={name}
+			placeholder={text}
+			type={type}
+			onChange={e => setState(e.target.value)}
+			/>
+			{error && <span>{error.text}</span>}
+		</div>
+	);
+}
 
 ## Results
 
